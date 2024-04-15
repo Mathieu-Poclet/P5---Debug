@@ -48,7 +48,7 @@
     tagsPosition: "bottom",
     navigation: true
   };
-
+  
   $.fn.mauGallery.listeners = function(options) {
     $(".gallery-item").on("click", function() {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
@@ -151,7 +151,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i - 1;
+          index = i - 1 ;
         }
       });
       next =
@@ -190,7 +190,6 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-
           index = i + 1;
         }
       });
@@ -242,9 +241,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-
-
-      $(this).addClass("active active-tag");
+      $(this).addClass("active-tag");
 
       var tag = $(this).data("images-toggle");
 
